@@ -62,10 +62,12 @@ class calculus:
           tempf = tempf.diff(t)
           count +=  1
     deriv = tempf
+    return deriv
 
   def integral(f):
     tempf = f
-    num = input("What do you want to integrate with respect to? Enter in the order you want to integrate")
+    num = input("What do you want to integrate with respect to? Enter in the order you want to integrate (xyzd)")
+    
     count = 1
     for i in num: 
       bounds = input(f"Are there any bounds on integration {count}? Type as [lower, upper] type null for each if there are none")
@@ -81,3 +83,5 @@ class calculus:
           
         elif i.equals('t'):
           integrate(tempf, 't')
+      integ = tempf
+      return integ
