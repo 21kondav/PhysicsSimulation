@@ -9,15 +9,15 @@ pa = Particle('pa',po, m)
 #Building calculus methods
 system = {} #a dictionary containing particles and their distance from the center
 
-class Kinematics():
+class Kinematics:
     def __init__(self, N, part, eqMotion):
         N = ReferenceFrame(N)
         self.part = part
         self.eqMotion = eqMotion
     def createEqMot(self, r, v, a):
-        self.eqMotion = {'r': r, 'v':v, 'a':a}
+        self.eqMotion = {'r': r, 'v': v, 'a': a}
 
-class Equation():
+class Equation: #creates equation and methods to act on
     def __init__(self, eq):
         x, y, z, t = symbols('x y z t')
         expr = ''
@@ -80,5 +80,4 @@ class Vector:
         z = self.z + vect2.z
         addVect = Vector(x, y, z)
         return addVect
-    #Calculus on vectors
-    
+#Calculus on vectors
