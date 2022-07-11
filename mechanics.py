@@ -1,5 +1,5 @@
 #!\C:\Users\David\PhysicsSimulation\pyVirtual python3
-import numpy as np
+import tkinter as tk
 from sympy.physics.mechanics import *
 from sympy import *
 from sympy.physics.vector import *
@@ -17,10 +17,9 @@ system = {}  # a dictionary containing particles and their distance from the cen
 # all events are deterministic
 # all positions and velocities are absolute
 
-
 class Kinematics:  # the backbone for all things kinematic, i.e. when an absolute position, velocity, or acceleration is known
     def __init__(self, N, part, eqMotion):  # creates a kinematic scenario
-        # defines a reference for which an object is present in
+        # defines a reference frame for which an object is present in
         N = ReferenceFrame(N)
         self.part = part  # possibly unecesary ------------
         self.eqMotion = eqMotion
@@ -113,4 +112,10 @@ class Vector:
         z = self.z + vect2.z
         addVect = Vector(x, y, z)
         return addVect
-# Calculus on vectors
+#GUI
+class Calculator:
+    def __init__(self, name, window):
+        self.name = name
+        self.window = tk.Tk(name)
+        tk.Label(text="Equation")
+        entry = tk.Entry(fg="black", bg="white", width=50)
