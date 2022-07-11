@@ -1,3 +1,4 @@
+#!\C:\Users\David\PhysicsSimulation\pyVirtual python3
 import numpy as np
 from sympy.physics.mechanics import *
 from sympy import *
@@ -12,7 +13,7 @@ system = {}  # a dictionary containing particles and their distance from the cen
 # assumptions for kinematics:
 #acceleration is constant
 #time is continuous and symmetric
-#space is uniform and symmetric
+#space is uniform and  symmetric
 # all events are deterministic
 # all positions and velocities are absolute
 
